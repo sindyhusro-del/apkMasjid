@@ -1,4 +1,4 @@
-import 'package:apk_masjid/cndy_banner.dart';
+import 'package:apk_masjid/widget/banner/cndy_banner.dart';
 import 'package:flutter/material.dart';
 
 class CndyHomePage extends StatefulWidget {

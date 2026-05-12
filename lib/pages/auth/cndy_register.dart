@@ -1,4 +1,4 @@
-import 'package:apk_masjid/cndy_home_page.dart';
+import 'package:apk_masjid/pages/auth/cndy_home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

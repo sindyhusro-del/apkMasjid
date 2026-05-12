@@ -30,12 +30,12 @@ class _CndyBannerState extends State<CndyBanner> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 35),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 width: 140,
                 height: 140,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.white,
                 ),
@@ -44,20 +44,13 @@ class _CndyBannerState extends State<CndyBanner> {
                 ),
               ),
               Text(
-                "MASJID DARUSSALAM PNP",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(width: 5),
-              Text(
-                "COMUNTY QORYAH SAKINNAH",
+                "MASJID DARUSSALAM PNP\nCOMUNITY QORYAH\nSAKINNAH",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
+                  height: 1.2,
                 ),
               ),
             ],

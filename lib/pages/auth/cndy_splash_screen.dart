@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:apk_masjid/cndy_register.dart';
+import 'package:apk_masjid/pages/auth/cndy_register.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
