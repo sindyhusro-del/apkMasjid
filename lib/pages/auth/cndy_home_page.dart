@@ -22,7 +22,7 @@ class _CndyHomePageState extends State<CndyHomePage> {
             scrollDirection: Axis.horizontal,
             children: [CndyBanner()],
           ),
-        )
+        ),
       ],
     );
   }

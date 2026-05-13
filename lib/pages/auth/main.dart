@@ -1,8 +1,7 @@
 import 'package:apk_masjid/pages/auth/cndy_splash_screen.dart';
 import 'package:flutter/material.dart';
 
-void main(){
-
+void main() {
   runApp(MasjidApp());
 }
 
