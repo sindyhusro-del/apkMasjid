@@ -6,5 +6,10 @@ class CndyDasboardModel {
   final String label;
   final Color color;
 
-  CndyDasboardModel({required this.page, required this.icon, required this.label, required this.color});
+  CndyDasboardModel({
+    required this.page,
+    required this.icon,
+    required this.label,
+    required this.color,
+  });
 }

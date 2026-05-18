@@ -1,3 +1,4 @@
+import 'package:apk_masjid/pages/auth/cndy_dasboard_page.dart';
 import 'package:apk_masjid/pages/auth/cndy_home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -48,22 +49,6 @@ class _CndyRegisterState extends State<CndyRegister> {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: Container(
-          width: size.width,
-          height: size.height,
-          padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: Colors.pink.withValues(alpha: 0.5),
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                offset: Offset(1.5, 1.5),
-                color: Colors.green.withValues(alpha: 20),
-                blurRadius: 5,
-                spreadRadius: 5,
-              ),
-            ],
-          ),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -162,7 +147,7 @@ class _CndyRegisterState extends State<CndyRegister> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => CndyHomePage()),
+                      MaterialPageRoute(builder: (context) => CndyDasboardPage()),
                     );
                   },
                   style: ButtonStyle(
@@ -170,13 +155,12 @@ class _CndyRegisterState extends State<CndyRegister> {
                       Size(size.width - 80, 50),
                     ),
                   ),
-                  child: Text("Submit", selectionColor: Colors.grey),
+                  child: Text("SUBMIT", selectionColor: Colors.grey),
                 ),
               ],
             ),
           ),
         ),
-      ),
     );
   }
 }

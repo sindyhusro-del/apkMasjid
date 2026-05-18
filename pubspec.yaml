@@ -58,8 +58,8 @@ flutter:
   uses-material-design: true
 
   assets:
-  - asesst/image/masjid.jpg
-  #   - images/a_dot_ham.jpeg
+  - asesst/image/masjid.jpg,
+  - asesst/image/wjh2.jpg.jpeg,
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

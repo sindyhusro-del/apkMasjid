@@ -14,16 +14,16 @@ class _CndyDasboardPageState extends State<CndyDasboardPage> {
   int selectedIndex = 0;
   Map<int, CndyCategoryModel> pages = {
     0: CndyCategoryModel(
-      icon: Icons.home,
-      title: "Home",
-      color: Colors.teal,
-      page: CndyDasboardPage(),
-    ),
-    1: CndyCategoryModel(
       icon: Icons.settings,
       title: "Settings",
-      color: Colors.teal,
-      page: CndyDasboardPage(),
+      color: Colors.white,
+      page: CndyHomePage(),
+    ),
+    1: CndyCategoryModel(
+      icon: Icons.home,
+      title: "Home",
+      color: Colors.white,
+      page: CndyHomePage(),
     ),
   };
 
@@ -31,8 +31,9 @@ class _CndyDasboardPageState extends State<CndyDasboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.green,
         currentIndex: selectedIndex,
-        elevation: 5,
+        elevation: 1,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         onTap: (value) {
@@ -44,10 +45,10 @@ class _CndyDasboardPageState extends State<CndyDasboardPage> {
             .map(
               (sindy) =>
               BottomNavigationBarItem(
-                icon: Icon(sindy.value.icon, color: Colors.green),
+                icon: Icon(sindy.value.icon, color: Colors.white),
                 activeIcon: Icon(sindy.value.icon, color: sindy.value.color),
                 label: sindy.value.title,
-                backgroundColor: Colors.greenAccent,
+                backgroundColor: Colors.green,
               ),
         )
             .toList(),

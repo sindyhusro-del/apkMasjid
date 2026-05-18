@@ -1,3 +1,4 @@
+import 'package:apk_masjid/pages/auth/cndy_home_page.dart';
 import 'package:flutter/material.dart';
 
 class CndyCategoryWidget extends StatelessWidget {
@@ -6,17 +7,23 @@ class CndyCategoryWidget extends StatelessWidget {
   final Color color;
   final Widget page;
 
-  const CndyCategoryWidget({super.key, required this.icon, required this.title, required this.color, required this.page});
+  const CndyCategoryWidget({
+    super.key,
+    required this.icon,
+    required this.title,
+    required this.color,
+    required this.page,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => page),
+        MaterialPageRoute(builder: (context) => CndyHomePage()),
       ),
       child: Card(
-        elevation: 3,
+        elevation: 1,
         child: Column(
           children: [
             Icon(icon, size: 50, color: color),

@@ -12,20 +12,14 @@ class _CndyDetailTausiyahState extends State<CndyDetailTausiyah> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.green.shade900,
-                Colors.green.shade800,
-                Colors.green.shade700,
-                Colors.green.shade500,
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.greenAccent,
+        child: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.arrow_back, size: 35, color: Colors.black,
           ),
+        ),
       ),
     );
   }
