@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     t = Timer.periodic(
       const Duration(seconds: 5),
-          (timer) => Navigator.pushReplacement(
+      (timer) => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => CndyRegister()),
       ),
@@ -30,6 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
     t.cancel();
     super.dispose();
   }
+
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
@@ -37,25 +38,26 @@ class _SplashScreenState extends State<SplashScreen> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-         gradient: LinearGradient(
-             colors: [
-               Colors.green.shade900,
-               Colors.green.shade800,
-               Colors.green.shade700,
-               Colors.green.shade500,
-             ],
-           begin: Alignment.topCenter,
-           end: Alignment.bottomCenter,
-         ),
+          gradient: LinearGradient(
+            colors: [
+              Colors.green.shade900,
+              Colors.green.shade800,
+              Colors.green.shade700,
+              Colors.green.shade500,
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
         ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(height: 100),
-              Image(image: AssetImage("asesst/image/masjid.jpg")),
-              SizedBox(height: 100),]
-                ),
-              ),
-      );
-    }
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 100),
+            Image(image: AssetImage("asesst/image/masjid.jpg")),
+            SizedBox(height: 100),
+          ],
+        ),
+      ),
+    );
+  }
 }
