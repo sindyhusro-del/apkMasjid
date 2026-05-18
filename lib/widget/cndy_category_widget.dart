@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
 
-class CndyCategoryWidget extends StatefulWidget {
-  const CndyCategoryWidget({super.key});
+class CndyCategoryWidget extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final Color color;
+  final Widget page;
 
-  @override
-  State<CndyCategoryWidget> createState() => _CndyCategoryWidgetState();
-}
+  const CndyCategoryWidget({super.key, required this.icon, required this.title, required this.color, required this.page});
 
-class _CndyCategoryWidgetState extends State<CndyCategoryWidget> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return GestureDetector(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => page),
+      ),
+      child: Card(
+        elevation: 3,
+        child: Column(
+          children: [
+            Icon(icon, size: 50, color: color),
+            Text(title),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -11,18 +11,18 @@ class CndyRegister extends StatefulWidget {
 
 class _CndyRegisterState extends State<CndyRegister> {
   TextEditingController _username = TextEditingController();
-  TextEditingController _passwoard = TextEditingController();
-  bool _isMasjid = true;
+  TextEditingController _password = TextEditingController();
+  bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
-  bool _aplksiMe = true;
+  bool _commelMe = true;
 
-  void isMasjid() {
+  void isSecure() {
     setState(() {
-      if (_isMasjid) {
-        _isMasjid = false;
+      if (_isSecure) {
+        _isSecure = false;
         _icon = CupertinoIcons.eye_slash;
       } else {
-        _isMasjid = true;
+        _isSecure = true;
         _icon = CupertinoIcons.eye_fill;
       }
     });
@@ -33,8 +33,8 @@ class _CndyRegisterState extends State<CndyRegister> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        width: size.width,
-        height: size.height,
+        width: double.infinity,
+        height: double.infinity,
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -47,119 +47,133 @@ class _CndyRegisterState extends State<CndyRegister> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(offset: Offset(1.5, 1.5), blurRadius: 5, spreadRadius: 5),
-          ],
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Text(
-                "ASSALAMUALAIKUM",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 35,
-                ),
-              ),
-              Text(
-                "REGISTRASI DAHULU",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                ),
-              ),
-              SizedBox(height: 20),
-              TextField(
-                controller: _username,
-                keyboardType: TextInputType.text,
-                obscureText: _isMasjid,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.greenAccent.withValues(alpha: 0.7),
-                  hintText: "Gmail",
-                  labelText: "Isi Gmail kamu",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              TextField(
-                controller: _passwoard,
-                keyboardType: TextInputType.text,
-                obscureText: _isMasjid,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.greenAccent.withValues(alpha: 0.5),
-                  hintText: "Username",
-                  labelText: "Isi username kamu",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              TextField(
-                controller: _username,
-                keyboardType: TextInputType.text,
-                obscureText: _isMasjid,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.greenAccent.withValues(alpha: 0.7),
-                  hintText: "Passwoard",
-                  labelText: "Isi passwoard kamu",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              TextField(
-                controller: _passwoard,
-                keyboardType: TextInputType.text,
-                obscureText: _isMasjid,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.greenAccent.withValues(alpha: 0.5),
-                  hintText: "Confrim Passwoard",
-                  labelText: "Conf passwoard kamu",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Checkbox(
-                    value: _aplksiMe,
-                    onChanged: (value) {
-                      setState(() {
-                        _aplksiMe = !_aplksiMe;
-                      });
-                    },
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => CndyHomePage()),
-                  );
-                },
-                style: ButtonStyle(
-                  minimumSize: WidgetStatePropertyAll(
-                    Size(size.width - 80, 50),
-                  ),
-                ),
-                child: Text("Submit", style: TextStyle(color: Colors.grey)),
+        child: Container(
+          width: size.width,
+          height: size.height,
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            color: Colors.pink.withValues(alpha: 0.5),
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                offset: Offset(1.5, 1.5),
+                color: Colors.green.withValues(alpha: 20),
+                blurRadius: 5,
+                spreadRadius: 5,
               ),
             ],
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Text(
+                  "ASSALAMUALIKUM",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),
+                ),
+                Text(
+                  "REGISTRASI TERLEBIH DAHULU",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextField(
+                  controller: _username,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isSecure,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.green.shade200.withValues(alpha: 0.7),
+                    hintText: "Masukkan Email",
+                    labelText: "Isi Email kamu",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                TextField(
+                  controller: _password,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isSecure,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.green.shade200.withValues(alpha: 0.5),
+                    hintText: "Masukkan Username",
+                    labelText: "Isi Username kamu",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextField(
+                  controller: _username,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isSecure,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.green.shade200.withValues(alpha: 0.7),
+                    hintText: "Masukkan Passwoard",
+                    labelText: "Isi passwoard kamu",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                TextField(
+                  controller: _username,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isSecure,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.green.shade200.withValues(alpha: 0.7),
+                    hintText: "Confrim Passwoard",
+                    labelText: "Confn Passwoard kamu",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    Checkbox(
+                      value: _commelMe,
+                      onChanged: (value) {
+                        setState(() {
+                          _commelMe = !_commelMe;
+                        });
+                      },
+                    ),
+                    Text("Remember Me", style: TextStyle(color: Colors.white)),
+                  ],
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => CndyHomePage()),
+                    );
+                  },
+                  style: ButtonStyle(
+                    minimumSize: WidgetStatePropertyAll(
+                      Size(size.width - 80, 50),
+                    ),
+                  ),
+                  child: Text("Submit", selectionColor: Colors.grey),
+                ),
+              ],
+            ),
           ),
         ),
       ),
