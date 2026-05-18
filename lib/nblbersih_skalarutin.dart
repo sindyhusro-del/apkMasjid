@@ -6,7 +6,7 @@ class NblbersihSkalarutin extends StatefulWidget {
   @override
   State<NblbersihSkalarutin> createState() => _NblbersihSkalarutinState();
 }
-
+//
 class _NblbersihSkalarutinState extends State<NblbersihSkalarutin> {
 
   List<String> hari = [
