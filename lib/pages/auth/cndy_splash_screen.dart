@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:apk_masjid/pages/auth/cndy_register.dart';
+import 'package:apk_masjid/pages/auth/nbl_login.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       const Duration(seconds: 5),
       (timer) => Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => CndyRegister()),
+        MaterialPageRoute(builder: (context) => nbl_login()),
       ),
     );
     super.initState();

@@ -1,5 +1,6 @@
 import 'package:apk_masjid/model/cndy_category_model.dart';
 import 'package:apk_masjid/pages/auth/cndy_home_page.dart';
+import 'package:apk_masjid/pages/auth/nbl_pengaturan.dart';
 import 'package:apk_masjid/service/cndy_category_service.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class _CndyDasboardPageState extends State<CndyDasboardPage> {
       icon: Icons.settings,
       title: "Settings",
       color: Colors.white,
-      page: CndyHomePage(),
+      page: NblPengaturan(),
     ),
     1: CndyCategoryModel(
       icon: Icons.home,
