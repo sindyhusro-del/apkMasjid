@@ -10,6 +10,11 @@ class NblImamMasjid extends StatefulWidget {
 class _NblImamMasjidState extends State<NblImamMasjid> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("JADWAL IMAM MASJID"),
+        backgroundColor: Colors.teal.shade200,
+      ),
+    );
   }
 }
