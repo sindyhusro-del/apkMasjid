@@ -1,5 +1,6 @@
 import 'package:apk_masjid/service/cndy_category_service.dart';
 import 'package:apk_masjid/widget/banner/cndy_banner.dart';
+import 'package:apk_masjid/widget/cndy_category_widget.dart';
 import 'package:flutter/material.dart';
 
 class CndyHomePage extends StatefulWidget {
@@ -23,6 +24,29 @@ class _CndyHomePageState extends State<CndyHomePage> {
             scrollDirection: Axis.horizontal,
             children: [CndyBanner()],
           ),
+        ),
+        Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: 400,
+              alignment: Alignment.center,
+              margin: const EdgeInsets.all(50),
+              child: GridView.builder(
+                itemCount: cats.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 2,
+                ),
+                itemBuilder: (context, index) => CndyCategoryWidget(
+                  icon: cats[index].icon,
+                  title: cats[index].title,
+                  color: cats[index].color,
+                  page: cats[index].page,
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     );

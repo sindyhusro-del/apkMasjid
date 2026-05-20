@@ -10,6 +10,10 @@ class CndyAgenda extends StatefulWidget {
 class _CndyAgendaState extends State<CndyAgenda> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Agenda"),
+      ),
+    );
   }
 }

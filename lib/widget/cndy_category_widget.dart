@@ -20,10 +20,10 @@ class CndyCategoryWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => CndyHomePage()),
+        MaterialPageRoute(builder: (context) => page),
       ),
       child: Card(
-        elevation: 1,
+        elevation: 10,
         child: Column(
           children: [
             Icon(icon, size: 50, color: color),

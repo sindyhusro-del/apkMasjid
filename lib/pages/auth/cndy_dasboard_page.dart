@@ -15,16 +15,16 @@ class _CndyDasboardPageState extends State<CndyDasboardPage> {
   int selectedIndex = 0;
   Map<int, CndyCategoryModel> pages = {
     0: CndyCategoryModel(
-      icon: Icons.settings,
-      title: "Settings",
-      color: Colors.white,
-      page: NblPengaturan(),
-    ),
-    1: CndyCategoryModel(
       icon: Icons.home,
       title: "Home",
       color: Colors.white,
       page: CndyHomePage(),
+    ),
+    1: CndyCategoryModel(
+      icon: Icons.settings,
+      title: "Settings",
+      color: Colors.white,
+      page: NblPengaturan(),
     ),
   };
 

@@ -13,6 +13,7 @@ class _NblTausiyahState extends State<NblTausiyah> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Tausiyah"),
+        backgroundColor: Colors.green,
       ),
     );
   }
