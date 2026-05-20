@@ -115,7 +115,7 @@ class _NblLoginState extends State<NblLogin> {
                         MaterialPageRoute(builder: (context) => CndyRegister()),
                       );
                     },
-                    child: Text("Daftar", style: TextStyle(color: Colors.grey)),
+                    child: Text("Registrasi", style: TextStyle(color: Colors.grey)),
                   ),
                   SizedBox(width: 25),
                   ElevatedButton(
@@ -124,7 +124,7 @@ class _NblLoginState extends State<NblLogin> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      backgroundColor: Colors.green,
+                      backgroundColor: Colors.grey,
                     ),
                     onPressed: () {
                       if (_username.text == "APKMASJID" &&

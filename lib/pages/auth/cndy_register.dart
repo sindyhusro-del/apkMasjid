@@ -90,7 +90,7 @@ class _CndyRegisterState extends State<CndyRegister> {
                 obscureText: _isSecure,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.green.shade200.withValues(alpha: 0.7),
+                  fillColor: Colors.green.shade200.withValues(alpha: 0.5),
                   hintText: "Masukkan Username",
                   labelText: "Isi Username kamu",
                   border: OutlineInputBorder(
@@ -105,7 +105,7 @@ class _CndyRegisterState extends State<CndyRegister> {
                 obscureText: _isSecure,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.green.shade200.withValues(alpha: 0.7),
+                  fillColor: Colors.green.shade200.withValues(alpha: 0.5),
                   hintText: "Masukkan Passwoard",
                   labelText: "Isi passwoard kamu",
                   border: OutlineInputBorder(
@@ -128,7 +128,7 @@ class _CndyRegisterState extends State<CndyRegister> {
                   ),
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushReplacement(

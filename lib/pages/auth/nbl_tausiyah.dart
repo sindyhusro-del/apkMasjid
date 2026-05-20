@@ -14,6 +14,7 @@ class _NblTausiyahState extends State<NblTausiyah> {
       appBar: AppBar(
         title: Text("Tausiyah"),
         backgroundColor: Colors.green,
+
       ),
     );
   }
