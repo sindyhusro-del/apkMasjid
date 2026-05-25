@@ -1,3 +1,4 @@
+import 'package:apk_masjid/service/cndy_bersih_service.dart';
 import 'package:flutter/material.dart';
 
 class NblbersihSkalarutin extends StatefulWidget {
@@ -22,6 +23,30 @@ class _NblbersihSkalarutinState extends State<NblbersihSkalarutin> {
             fontSize: 20,
           ),
         ),
+      ),
+      body: Column(
+        children: [
+          Container(width: double.infinity,height: 600,
+            child: ListView.builder(
+              itemBuilder: (context, i) => Column(
+                children: [
+                  Container(
+                    color: Colors.green.shade200,
+                    child: Text(bersih[i].title),
+                  ),
+                  Container(
+                    width: double.infinity,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage(bersih[i].gambar)),
+                    ),
+                  ),
+                ],
+              ),
+              itemCount: bersih.length,
+            ),
+          ),
+        ],
       ),
     );
   }

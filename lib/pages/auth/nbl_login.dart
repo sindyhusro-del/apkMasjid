@@ -51,6 +51,7 @@ class _NblLoginState extends State<NblLogin> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: 25),
               Text(
                 "ASSALAMUALAIKUM",
                 style: TextStyle(
@@ -67,7 +68,7 @@ class _NblLoginState extends State<NblLogin> {
                   fontSize: 20,
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 50),
               TextField(
                 controller: _username,
                 keyboardType: TextInputType.text,

@@ -1,6 +1,4 @@
 import 'package:apk_masjid/pages/auth/cndy_dasboard_page.dart';
-import 'package:apk_masjid/pages/auth/cndy_home_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CndyRegister extends StatefulWidget {
@@ -11,21 +9,23 @@ class CndyRegister extends StatefulWidget {
 }
 
 class _CndyRegisterState extends State<CndyRegister> {
-  TextEditingController _username = TextEditingController();
-  TextEditingController _password = TextEditingController();
-  bool _isSecure = true;
-  IconData _icon = Icons.remove_red_eye;
-  bool _commelMe = true;
+  final TextEditingController _nama = TextEditingController();
+  final TextEditingController _username = TextEditingController();
+  final TextEditingController _pass = TextEditingController();
+  final TextEditingController _conf = TextEditingController();
 
-  void isSecure() {
+  bool _isForeverPass = true;
+  bool _isForeverConf = true;
+
+  void _isforeverpass() {
     setState(() {
-      if (_isSecure) {
-        _isSecure = false;
-        _icon = CupertinoIcons.eye_slash;
-      } else {
-        _isSecure = true;
-        _icon = CupertinoIcons.eye_fill;
-      }
+      _isForeverPass = !_isForeverPass;
+    });
+  }
+
+  void _isforeverconf() {
+    setState(() {
+      _isForeverConf = !_isForeverPass;
     });
   }
 
@@ -49,104 +49,103 @@ class _CndyRegisterState extends State<CndyRegister> {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Text(
-                "ASSALAMUALIKUM",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                ),
-              ),
-              Text(
-                "REGISTRASI TERLEBIH DAHULU",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                ),
-              ),
-              SizedBox(height: 20),
-              TextField(
-                controller: _username,
-                keyboardType: TextInputType.text,
-                obscureText: _isSecure,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.green.shade200.withValues(alpha: 0.7),
-                  hintText: "Masukkan Email",
-                  labelText: "Isi Email kamu",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 25),
+                Text(
+                  "ASSALAMUALAIKUM",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40,
                   ),
                 ),
-              ),
-              SizedBox(height: 10),
-              TextField(
-                controller: _password,
-                keyboardType: TextInputType.text,
-                obscureText: _isSecure,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.green.shade200.withValues(alpha: 0.5),
-                  hintText: "Masukkan Username",
-                  labelText: "Isi Username kamu",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
+                Text(
+                  "Registrasi terlebih dahulu",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
                   ),
                 ),
-              ),
-              SizedBox(height: 20),
-              TextField(
-                controller: _username,
-                keyboardType: TextInputType.text,
-                obscureText: _isSecure,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.green.shade200.withValues(alpha: 0.5),
-                  hintText: "Masukkan Passwoard",
-                  labelText: "Isi passwoard kamu",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
+                SizedBox(height: 45),
+                TextField(
+                  controller: _nama,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isForeverPass,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.green.shade200.withValues(alpha: 0.5),
+                    hintText: "Masukkan Email",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(height: 10),
-              TextField(
-                controller: _username,
-                keyboardType: TextInputType.text,
-                obscureText: _isSecure,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.green.shade200.withValues(alpha: 0.7),
-                  hintText: "Confrim Passwoard",
-                  labelText: "Confn Passwoard kamu",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
+                SizedBox(height: 10),
+                TextField(
+                  controller: _username,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isForeverPass,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.green.shade200.withValues(alpha: 0.5),
+                    hintText: "Masukkan Username",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => CndyDasboardPage()),
-                  );
-                },
-                style: ButtonStyle(
-                  minimumSize: WidgetStatePropertyAll(
-                    Size(size.width - 80, 50),
+                SizedBox(height: 20),
+                TextField(
+                  controller: _pass,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isForeverPass,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.green.shade200.withValues(alpha: 0.5),
+                    hintText: "passwoard",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
                 ),
-                child: Text("SUBMIT", selectionColor: Colors.grey),
-              ),
-            ],
+                SizedBox(height: 10),
+                TextField(
+                  controller: _conf,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isForeverConf,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.green.shade200.withValues(alpha: 0.5),
+                    hintText: "confrim passwoard",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 50,height: 25,),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 60),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    backgroundColor: Colors.white,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CndyDasboardPage()),
+                    );
+                  },
+                  child: Text("confrim", style: TextStyle(color: Colors.grey)),
+                ),
+              ],
+            ),
           ),
         ),
-      ),
     );
   }
 }
