@@ -11,6 +11,7 @@ class NblImamMasjid extends StatefulWidget {
 class _NblImamMasjidState extends State<NblImamMasjid> {
   @override
   Widget build(BuildContext context) {
+    var size=MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text("Jadwal Imam Masid"),
@@ -28,12 +29,22 @@ class _NblImamMasjidState extends State<NblImamMasjid> {
                     color: Colors.green.shade200,
                     child: Text(imam[i].title),
                   ),
-                  Container(
-                    width: double.infinity,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage(imam[i].image)),
-                    ),
+                  Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        width: size.width*0.3,
+                        height: 150,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(image: AssetImage(imam[i].image),fit: BoxFit.cover),
+                        ),
+                      ),Container(
+                        width: size.width*0.3,
+                        height: 150,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(image: AssetImage(imam[i].image),fit: BoxFit.cover),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

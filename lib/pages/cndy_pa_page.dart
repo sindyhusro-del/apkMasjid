@@ -19,16 +19,8 @@ class _CndyPaPageState extends State<CndyPaPage> {
             SizedBox(height: 20),
             Center(
               child: Text(
-                "Hukum Orang Orang Maksiat",
+                "PENGAJIAN AL-QUR'AN",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(height: 20),
-            Center(
-              child: Image.asset(
-                "asesst/image/ss.hoom.jpeg",
-                width: 450,
-                fit: BoxFit.contain,
               ),
             ),
           ],

@@ -69,6 +69,8 @@ flutter:
   - asesst/image/ss.kda.jpeg
   - asesst/image/ss.mmlq.jpeg
   - asesst/image/ss.phbdi.jpeg
+  - asesst/image/takmir.jpg
+  - asesst/image/remas.cewek.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

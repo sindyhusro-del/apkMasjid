@@ -27,13 +27,13 @@ class _CndyAgendaState extends State<CndyAgenda> {
                   MaterialPageRoute(builder: (context) => CndyBbmPage()),
                 );
               },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.all(10),
+                backgroundColor: Colors.green.shade300,
+              ),
               child: Text(
                 "Bersih bersih masjid",
-                style: TextStyle(
-                  backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
-                ),
+                style: TextStyle(fontSize: 25),
               ),
             ),
             SizedBox(height: 30),
@@ -44,14 +44,11 @@ class _CndyAgendaState extends State<CndyAgenda> {
                   MaterialPageRoute(builder: (context) => CndyPaPage()),
                 );
               },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
-              child: Text(
-                "Pengajian AlQuran",
-                style: TextStyle(
-                  backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
-                ),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.all(10),
+                backgroundColor: Colors.green.shade300,
               ),
+              child: Text("Pengajian AlQuran", style: TextStyle(fontSize: 25)),
             ),
             SizedBox(height: 30),
             ElevatedButton(
@@ -61,13 +58,13 @@ class _CndyAgendaState extends State<CndyAgenda> {
                   MaterialPageRoute(builder: (context) => CndySaypdPage()),
                 );
               },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.all(10),
+                backgroundColor: Colors.green.shade300,
+              ),
               child: Text(
                 "Santunan anak yatim piatu dan dhufa",
-                style: TextStyle(
-                  backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
-                ),
+                style: TextStyle(fontSize: 25),
               ),
             ),
             SizedBox(height: 30),
@@ -78,13 +75,13 @@ class _CndyAgendaState extends State<CndyAgenda> {
                   MaterialPageRoute(builder: (context) => CndyPrpmPage()),
                 );
               },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.all(10),
+                backgroundColor: Colors.green.shade300,
+              ),
               child: Text(
                 "Pertemuan rapat pengurus masjid",
-                style: TextStyle(
-                  backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
-                ),
+                style: TextStyle(fontSize: 25),
               ),
             ),
             SizedBox(height: 30),
@@ -95,13 +92,13 @@ class _CndyAgendaState extends State<CndyAgenda> {
                   MaterialPageRoute(builder: (context) => CndyPrpmPage()),
                 );
               },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.all(10),
+                backgroundColor: Colors.green.shade300,
+              ),
               child: Text(
                 "Pembagian jumat berkah",
-                style: TextStyle(
-                  backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
-                ),
+                style: TextStyle(fontSize: 25),
               ),
             ),
           ],

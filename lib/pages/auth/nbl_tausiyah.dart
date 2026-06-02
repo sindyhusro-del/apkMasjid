@@ -18,95 +18,98 @@ class _NblTausiyahState extends State<NblTausiyah> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Tausiyah"), backgroundColor: Colors.green),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CndyMmlqPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
-              child: Text(
-                "Malam-Malam Lailatul Qadar",
-                style: TextStyle(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 25.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CndyMmlqPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.all(10),
                   backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
+                ),
+                child: Text(
+                  "Malam-Malam Lailatul Qadar",
+                  style: TextStyle(fontSize: 30),
                 ),
               ),
-            ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CndyHoomPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
-              child: Text(
-                "Hukum Orang Orang Maksiat",
-                style: TextStyle(
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CndyHoomPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.all(10),
                   backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
+                ),
+                child: Text(
+                  "Hukum Orang Orang Maksiat",
+                  style: TextStyle(fontSize: 30),
                 ),
               ),
-            ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CndyKdaPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
-              child: Text(
-                "Kehidupan Dunia Dan Akhirat",
-                style: TextStyle(
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CndyKdaPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.all(10),
                   backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
+                ),
+                child: Text(
+                  "Kehidupan Dunia Dan Akhirat",
+                  style: TextStyle(fontSize: 30),
                 ),
               ),
-            ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CndyPhbdiPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
-              child: Text(
-                "Peringatan Hari Besar Dalam Islam",
-                style: TextStyle(
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CndyPhbdiPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.all(10),
                   backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
+                ),
+                child: Text(
+                  "Peringatan Hari Besar Dalam Islam",
+                  style: TextStyle(fontSize: 25),
                 ),
               ),
-            ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CndyAdkPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.all(10)),
-              child: Text(
-                "Akhlak Dan Kepribadian",
-                style: TextStyle(
+              SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CndyAdkPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.all(10),
                   backgroundColor: Colors.green.shade300,
-                  fontSize: 25,
+                ),
+                child: Text(
+                  "Akhlak Dan Kepribadian",
+                  style: TextStyle(fontSize: 30),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

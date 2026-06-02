@@ -10,6 +10,22 @@ class CndyPjbPage extends StatefulWidget {
 class _CndyPjbPageState extends State<CndyPjbPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.green.shade300,
+      body: Container(
+        width: double.infinity,
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            Center(
+              child: Text(
+                "Pembagian Jumat Berkah",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

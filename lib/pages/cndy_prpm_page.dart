@@ -10,6 +10,22 @@ class CndyPrpmPage extends StatefulWidget {
 class _CndyPrpmPageState extends State<CndyPrpmPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.green.shade300,
+      body: Container(
+        width: double.infinity,
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            Center(
+              child: Text(
+                "Pertemuan rapat Pengurus Masjid",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
