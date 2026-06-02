@@ -20,9 +20,14 @@ class _CndySaypdPageState extends State<CndySaypdPage> {
             Center(
               child: Text(
                 "Santunan Anak Yatim Piatu dan Dhufa",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
+            SizedBox(height: 40),
+            Text("Dilaksanakan pada tanggal;", style: TextStyle(fontSize: 30)),
+            Text("01/05/2026", style: TextStyle(fontSize: 35)),
+            Text("Pukul/Waktu;", style: TextStyle(fontSize: 35)),
+            Text("08:00 pagi", style: TextStyle(fontSize: 35)),
           ],
         ),
       ),
